@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SocialTwin | ㈜옴니노드 — AI 가상패널 솔루션</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="socialtwin_icon.png" class="logo-img" alt="SocialTwin" style="width:30px;height:auto;flex-shrink:0;" />
+        <div class="logo-texts">
+          <span class="logo-product">SocialTwin</span>
+          <span class="logo-company">by ㈜옴니노드</span>
+        </div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#product">솔루션</a></li>
+        <li><a href="#services">서비스</a></li>
+        <li><a href="socialtwin-detail.html#technology">기술</a></li>
+        <li><a href="socialtwin-detail.html#about">회사소개</a></li>
+        <li><a href="#contact" class="nav__cta">문의하기</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#product">솔루션</a></li>
+        <li><a href="#services">서비스</a></li>
+        <li><a href="socialtwin-detail.html#technology">기술</a></li>
+        <li><a href="socialtwin-detail.html#about">회사소개</a></li>
+        <li><a href="#contact">문의하기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <canvas id="networkCanvas"></canvas>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        ㈜옴니노드 · AI Social Simulation Company
+      </div>
+      <h1 class="hero__title">
+        현실은 단 한 번<br />
+        <span class="gradient-text">시뮬레이션은 수만 번</span>
+      </h1>
+      <p class="hero__desc">
+        SocialTwin은 AI 가상 패널로 대한민국 인구 구조를 복제,<br class="br-desktop"/>
+        실제 예산 집행 전 시장 반응을 수만 번 시뮬레이션합니다.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">무료 데모 신청</a>
+        <a href="#product" class="btn btn--ghost">솔루션 알아보기</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-target="40">0</span><span>+</span>
+          <span class="stat__label">시장성 검증 실적</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="10000">0</span><span>+</span>
+          <span class="stat__label">시뮬레이션 횟수</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="90">0</span><span>%</span>
+          <span class="stat__label">통계 정합성 목표</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>Social Simulation</span>
+      <span class="sep">✦</span>
+      <span>AI 가상패널</span>
+      <span class="sep">✦</span>
+      <span>디지털 트윈 사회</span>
+      <span class="sep">✦</span>
+      <span>IPF 모집단 설계</span>
+      <span class="sep">✦</span>
+      <span>시장성 검증</span>
+      <span class="sep">✦</span>
+      <span>AI 여론조사</span>
+      <span class="sep">✦</span>
+      <span>리스크 시뮬레이터</span>
+      <span class="sep">✦</span>
+      <span>SocialTwin</span>
+      <span class="sep">✦</span>
+      <span>AI 가상패널</span>
+      <span class="sep">✦</span>
+      <span>디지털 트윈 사회</span>
+      <span class="sep">✦</span>
+      <span>IPF 모집단 설계</span>
+      <span class="sep">✦</span>
+      <span>시장성 검증</span>
+      <span class="sep">✦</span>
+      <span>AI 여론조사</span>
+      <span class="sep">✦</span>
+      <span>리스크 시뮬레이터</span>
+      <span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- PAIN POINTS -->
+  <section class="pain" id="pain">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Problem</p>
+        <h2 class="section-title">기존 소비자 조사의<br/>4가지 한계</h2>
+      </div>
+      <div class="pain__grid">
+        <div class="pain-card">
+          <div class="pain-card__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="13" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 10v9l5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 7l2.5 2.5M29 7l-2.5 2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>고비용 · 장기간</h4>
+          <p>수주~수개월, 수백만~수천만 원의 비용 발생</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 8v20M10 28h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 15H6l4 8h8l-4-8zM26 12h4l-4 8h-8l4-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M10 15h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>의식적 편향</h4>
+          <p>사회적 체면으로 실제와 다른 '가짜 답변' 빈발</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="4" y="9" width="13" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="21" y="15" width="11" height="12" rx="2" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+              <path d="M17 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+              <path d="M7 14h7M7 19h5M7 24h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>단편적 데이터</h4>
+          <p>특정 시점 스냅샷만 수집, 시계열 분석 불가</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 30c0-4.4 3.6-8 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="26" cy="12" r="5" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+              <path d="M32 30c0-4.4-3.6-8-8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 2"/>
+              <path d="M24 22l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h4>표본 대표성 부재</h4>
+          <p>조사마다 다른 표본, 재현 불가능한 결과</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="product" id="product">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Solution</p>
+        <h2 class="section-title">
+          <img src="socialtwin_icon.png" class="section-logo" alt="SocialTwin" style="width:44px;height:auto;vertical-align:middle;margin-right:8px;" />
+          SocialTwin
+        </h2>
+        <p class="section-desc">AI 가상패널 기반 시장 및 여론 시뮬레이션 서비스</p>
+      </div>
+      <div class="product__grid">
+        <div class="product__visual">
+          <div class="product__orb product__orb--1"></div>
+          <div class="product__orb product__orb--2"></div>
+          <div class="product__screen">
+            <div class="screen__header">
+              <span class="screen__dot red"></span>
+              <span class="screen__dot yellow"></span>
+              <span class="screen__dot green"></span>
+              <span class="screen__title">SocialTwin · Dashboard</span>
+            </div>
+            <div class="screen__body">
+              <div class="screen__panel">
+                <div class="screen__label">가상 패널 생성</div>
+                <div class="screen__personas">
+                  <div class="persona">30대 직장인 여성</div>
+                  <div class="persona">20대 대학생 남성</div>
+                  <div class="persona">40대 자영업자</div>
+                  <div class="persona persona--more">+9,997명</div>
+                </div>
+              </div>
+              <div class="screen__panel">
+                <div class="screen__label">시뮬레이션 결과</div>
+                <div class="screen__bars">
+                  <div class="screen__bar-item">
+                    <span>구매 의향</span>
+                    <div class="screen__bar-track"><div class="screen__bar-fill" style="width:73%"></div></div>
+                    <span>73%</span>
+                  </div>
+                  <div class="screen__bar-item">
+                    <span>가격 수용성</span>
+                    <div class="screen__bar-track"><div class="screen__bar-fill" style="width:58%"></div></div>
+                    <span>58%</span>
+                  </div>
+                  <div class="screen__bar-item">
+                    <span>재구매율</span>
+                    <div class="screen__bar-track"><div class="screen__bar-fill" style="width:81%"></div></div>
+                    <span>81%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__text">
+          <div class="product__feature">
+            <div class="product__feature-num">01</div>
+            <div>
+              <strong>가상 사회 구축</strong>
+              <p>IPF 기반으로 대한민국 인구 구조를 완벽히 복제한 디지털 트윈 사회를 생성.</p>
+            </div>
+          </div>
+          <div class="product__feature">
+            <div class="product__feature-num">02</div>
+            <div>
+              <strong>설문 · 인터뷰 실행</strong>
+              <p>수천~수만 명의 가상 패널로 정성·정량 조사를 실시간 수행.</p>
+            </div>
+          </div>
+          <div class="product__feature">
+            <div class="product__feature-num">03</div>
+            <div>
+              <strong>리포트 자동 생성</strong>
+              <p>LLM 기반 전문 컨설팅 수준의 시뮬레이션 결과 보고서를 자동 출력.</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn--primary" style="margin-top:12px">프로토타입 데모 신청</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Services</p>
+        <h2 class="section-title">4가지 서비스</h2>
+        <p class="section-desc">B2B 스타트업부터 B2G 정부기관, B2P 선거까지</p>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card service-card--featured service-card--compact">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 5V2M16 30V27M5 16H2M30 16H27" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__tag">B2B · 시장진입기</div>
+          <h3>스타트업 시장성 검증</h3>
+          <p>AI 가상 패널로 실제 예산 집행 전 가상 시장에서 수천 번의 테스트를 통해 성공의 필연성을 확보합니다.</p>
+          <ul class="service-card__features">
+            <li>신제품·서비스 가상 시장 반응 조사</li>
+            <li>가격 수용성 및 구매 의향 분석</li>
+            <li>PMF 검증 및 Pivot 시뮬레이션</li>
+          </ul>
+          <a href="socialtwin-detail.html#technology" class="service-card__link" target="_blank" rel="noopener noreferrer">자세히 알아보기 →</a>
+        </div>
+
+        <div class="service-card service-card--compact">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M10 14H22M10 19H18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 8V6M12 8V6M20 8V6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M8 24h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 24v4M20 24v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__tag">Corporate · B2G</div>
+          <h3>AI 기업진단 · 창업보육기관 성과관리</h3>
+          <p>AI로 기업·입주사 역량을 진단하고, 보육기관 단위 시장성 검증·성과 관리까지 한 흐름으로 제공합니다.</p>
+          <ul class="service-card__features">
+            <li>재무·기술 역량 AI 진단 및 성장 전략 제언</li>
+            <li>입주기업 일괄 시장성 분석·PoC 연계</li>
+            <li>성과 지표 자동 리포팅 및 컨설팅</li>
+            <li>기관 계약·레퍼런스 구축</li>
+          </ul>
+          <a href="service-coming-soon.html?service=corp" class="service-card__link" target="_blank" rel="noopener noreferrer">자세히 알아보기 →</a>
+        </div>
+
+        <div class="service-card service-card--compact">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M4 26L10 16L16 20L22 10L28 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="4" cy="26" r="2" fill="currentColor"/>
+              <circle cx="28" cy="14" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="service-card__tag">B2G · 시장점유기</div>
+          <h3>정책 타당성 시뮬레이션</h3>
+          <p>지자체·정부의 정책 도입 전 여론 반응을 디지털 트윈 기반으로 사전 시뮬레이션합니다.</p>
+          <ul class="service-card__features">
+            <li>정책 수용성 가상 설문</li>
+            <li>지역별 인구 코호트 분석</li>
+            <li>정책 연구 용역 리포트</li>
+          </ul>
+          <a href="service-coming-soon.html?service=policy" class="service-card__link" target="_blank" rel="noopener noreferrer">자세히 알아보기 →</a>
+        </div>
+
+        <div class="service-card service-card--compact">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4L6 10V22L16 28L26 22V10L16 4Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 4V28M6 10L26 22M26 10L6 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__tag">B2P · 시장성숙기</div>
+          <h3>선거 · 정치 여론 분석</h3>
+          <p>가상 투표 시뮬레이션으로 선거 결과를 사전 예측하고 정치 여론을 상시 분석합니다.</p>
+          <ul class="service-card__features">
+            <li>가상 투표 시뮬레이션</li>
+            <li>유권자 코호트 감성 분석</li>
+            <li>선거 시즌 프리미엄 용역</li>
+          </ul>
+          <a href="service-coming-soon.html?service=election" class="service-card__link" target="_blank" rel="noopener noreferrer">자세히 알아보기 →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET -->
+  <section class="market" id="market">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Market Strategy</p>
+        <h2 class="section-title">단계적 시장 확장</h2>
+      </div>
+      <div class="market__steps">
+        <div class="market__step">
+          <div class="market__step-badge">Phase 1</div>
+          <div class="market__step-icon">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <path d="M19 4c0 0 11 5 11 16l-11 9-11-9C8 9 19 4 19 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="19" cy="17" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 25l-4 7h4l4-4M26 25l4 7h-4l-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>B2B 스타트업</h4>
+          <p>정기 구독형 시뮬레이션 및 심층 리포트 판매</p>
+          <div class="market__step-period">시장 진입기</div>
+        </div>
+        <div class="market__arrow">→</div>
+        <div class="market__step">
+          <div class="market__step-badge">Phase 2</div>
+          <div class="market__step-icon">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <path d="M7 33h24M5 18h28M19 5L33 18H5L19 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="11" y="22" width="4" height="11" rx="1" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="17" y="22" width="4" height="11" rx="1" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="23" y="22" width="4" height="11" rx="1" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h4>B2G 창업보육기관</h4>
+          <p>기관 단위 과업 계약, 성과 관리 프로그램</p>
+          <div class="market__step-period">시장 확장기</div>
+        </div>
+        <div class="market__arrow">→</div>
+        <div class="market__step">
+          <div class="market__step-badge">Phase 3</div>
+          <div class="market__step-icon">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <rect x="7" y="10" width="24" height="23" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 33h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="12" y="15" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="21" y="15" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="12" y="24" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="21" y="24" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M19 6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>B2G 지자체·정부</h4>
+          <p>정책 타당성 시뮬레이션 및 정책 연구 용역</p>
+          <div class="market__step-period">시장 점유기</div>
+        </div>
+        <div class="market__arrow">→</div>
+        <div class="market__step">
+          <div class="market__step-badge">Phase 4</div>
+          <div class="market__step-icon">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <rect x="6" y="16" width="26" height="17" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 16v-4a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 26l3 3 7-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>B2P 선거·정치</h4>
+          <p>가상 투표 시뮬레이션, 선거 시즌 프리미엄 용역</p>
+          <div class="market__step-period">시장 성숙기</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="section-eyebrow">Contact Us</p>
+          <h2 class="section-title" style="text-align:left">함께<br/>성장합시다</h2>
+          <p>데모 신청, 프로젝트 문의, 파트너십 제안을 보내주세요.<br/>영업일 기준 24시간 이내 답변드립니다.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="detail-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="1.5" y="3.5" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M1.5 6.5l7.5 4.5 7.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>hys@omninode.kr,</span>
+              <span>cwb@omninode.kr</span>
+            </div>
+            <div class="contact__detail">
+              <span class="detail-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <ellipse cx="9" cy="9" rx="3" ry="7" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M2 9h14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>socialtwin.site</span>
+            </div>
+            <div class="contact__detail">
+              <span class="detail-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 1.5a5.5 5.5 0 015.5 5.5c0 4-5.5 9.5-5.5 9.5S3.5 11 3.5 7A5.5 5.5 0 019 1.5z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="9" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span>대구시 북구 호암로 51, 대구창조경제혁신센터 4F AX창업오피스</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/xwvwokke" method="POST">
+          <input type="hidden" name="_subject" value="㈜옴니노드 홈페이지 문의" />
+          <input type="text" name="_gotcha" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="form__row">
+            <div class="form__group">
+              <label for="contactName">이름 *</label>
+              <input id="contactName" name="name" type="text" placeholder="홍길동" required />
+            </div>
+            <div class="form__group">
+              <label for="contactCompany">회사명 *</label>
+              <input id="contactCompany" name="company" type="text" placeholder="회사명" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="contactEmail">이메일 *</label>
+            <input id="contactEmail" name="email" type="email" placeholder="hello@company.com" required />
+          </div>
+          <div class="form__group">
+            <label for="contactService">관심 서비스 *</label>
+            <select id="contactService" name="service" required>
+              <option value="">4가지 서비스 중 선택해주세요</option>
+              <option value="스타트업 시장성 검증">스타트업 시장성 검증</option>
+              <option value="AI 기업진단 · 창업보육기관 성과관리">AI 기업진단 · 창업보육기관 성과관리</option>
+              <option value="정책 타당성 시뮬레이션">정책 타당성 시뮬레이션</option>
+              <option value="선거 · 정치 여론 분석">선거 · 정치 여론 분석</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="contactMessage">문의 내용 *</label>
+            <textarea id="contactMessage" name="message" rows="4" placeholder="문의 내용을 자유롭게 작성해주세요." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">문의 보내기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="margin-bottom:16px;display:flex;">
+            <img src="socialtwin_icon.png" class="logo-img" alt="SocialTwin" style="width:30px;height:auto;flex-shrink:0;" />
+            <div class="logo-texts">
+              <span class="logo-product">SocialTwin</span>
+              <span class="logo-company">by ㈜옴니노드</span>
+            </div>
+          </a>
+          <p>AI 가상패널 기반<br/>시장 및 여론 시뮬레이션 서비스</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="GitHub">git</a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h5>서비스</h5>
+            <ul>
+              <li><a href="#product">SocialTwin</a></li>
+              <li><a href="#services">스타트업 시장성 검증</a></li>
+              <li><a href="#services">AI 기업진단 · 창업보육기관 성과관리</a></li>
+              <li><a href="#services">정책 여론 시뮬레이션</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5>기술</h5>
+            <ul>
+              <li><a href="socialtwin-detail.html#technology">Digital Twin Society</a></li>
+              <li><a href="socialtwin-detail.html#technology">Memory Stream AI</a></li>
+              <li><a href="socialtwin-detail.html#technology">IPF 모집단 설계</a></li>
+              <li><a href="socialtwin-detail.html#technology">LLM 리포트 생성</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5>회사</h5>
+            <ul>
+              <li><a href="socialtwin-detail.html#about">㈜옴니노드 소개</a></li>
+              <li><a href="#market">시장 전략</a></li>
+              <li><a href="#contact">파트너십</a></li>
+              <li><a href="#contact">채용 문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 ㈜옴니노드 (OmniNode). All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span>✓</span> 문의가 성공적으로 전송되었습니다!
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

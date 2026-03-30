@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서비스 안내 | ㈜옴니노드</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #192848;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --indigo: #e8692a;
+      --cyan: #f0a060;
+      --gradient-main: linear-gradient(135deg, #e8692a 0%, #f0a060 100%);
+      --radius-md: 16px;
+      --border-soft: rgba(255,255,255,0.06);
+      --font-body: 'Noto Sans KR', 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 520px;
+      width: 100%;
+      background: rgba(29, 48, 96, 0.45);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 36px 32px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: rgba(232, 105, 42, 0.15);
+      border: 1px solid rgba(232, 105, 42, 0.35);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.35;
+    }
+    .desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      padding: 16px;
+      border-radius: 10px;
+      background: rgba(22, 36, 68, 0.6);
+      border: 1px solid var(--border-soft);
+      margin-bottom: 28px;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back:hover {
+      color: var(--cyan);
+    }
+    .back span {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="badge">출시예정</p>
+    <h1 id="title">서비스</h1>
+    <p class="desc" id="desc"></p>
+    <p class="note">서비스의 상세 정보가 곧 제공될 예정입니다.</p>
+    <a class="back" href="index.html"><span>←</span> 메인 페이지로 돌아가기</a>
+  </div>
+  <script>
+    const services = {
+      corp: {
+        title: 'AI 기업진단 · 창업보육기관 성과관리',
+        desc: '기업 단위 AI 진단(재무·기술 역량, 성장 전략)과 창업보육기관의 입주기업 시장성 분석·성과 관리·PoC 연계·리포팅을 묶은 통합 서비스입니다. 출시에 맞춰 상세 범위와 과금을 안내할 예정입니다.'
+      },
+      policy: {
+        title: '정책 타당성 시뮬레이션',
+        desc: '지자체·정부의 정책 도입 전, 디지털 트윈 기반 가상 여론·수용성 시뮬레이션으로 타당성을 사전 검증합니다.'
+      },
+      election: {
+        title: '선거 · 정치 여론 분석',
+        desc: '가상 투표 시뮬레이션으로 선거 결과를 사전에 점검하고, 유권자 코호트별 정치·여론 동향을 상시 분석하는 서비스입니다.'
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    let key = params.get('service') || '';
+    const alias = { ai: 'corp', incubator: 'corp' };
+    if (alias[key]) key = alias[key];
+    const info = services[key];
+
+    if (info) {
+      document.getElementById('title').textContent = info.title;
+      document.getElementById('desc').textContent = info.desc;
+      document.title = info.title + ' | ㈜옴니노드';
+    } else {
+      document.getElementById('title').textContent = '서비스 안내';
+      document.getElementById('desc').textContent = '요청하신 서비스 정보를 준비 중입니다.';
+    }
+  </script>
+</body>
+</html>
